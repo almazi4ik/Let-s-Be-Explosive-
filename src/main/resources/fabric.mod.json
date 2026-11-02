@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "lets_be_explosive",
+  "version": "${version}",
+  "name": "Let's Be Explosive!",
+  "description": "TNT explodes layer by layer!",
+  "authors": [
+    "JustAlmazik"
+  ],
+  "contact": {
+    "homepage": "https://github.com/almazi4ik/Let-s-Be-Explosive-",
+    "sources": "https://github.com/almazi4ik/Let-s-Be-Explosive-"
+  },
+  "license": "MIT",
+  "icon": "assets/lets_be_explosive/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.letsbeexplosive.LetsBeExplosive"
+    ],
+    "client": [
+      "com.letsbeexplosive.client.LetsBeExplosiveClient"
+    ]
+  },
+  "mixins": [
+    "lets_be_explosive.mixins.json",
+    {
+      "config": "lets_be_explosive.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
