@@ -3,7 +3,7 @@
   "id": "lets_be_explosive",
   "version": "${version}",
   "name": "Let's Be Explosive!",
-  "description": "TNT explodes layer by layer!",
+  "description": "TNT and creeper explosions destroy blocks layer by layer!",
   "authors": [
     "JustAlmazik"
   ],

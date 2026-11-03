@@ -1,14 +1,15 @@
 {
-	"required": true,
-	"package": "com.letsbeexplosive.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"LetsBeExplosiveMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
-	}
+    "required": true,
+    "package": "com.letsbeexplosive.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "LetsBeExplosiveMixin",
+        "CreeperMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "overwrites": {
+        "requireAnnotations": true
+    }
 }

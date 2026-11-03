@@ -9,6 +9,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.*;
@@ -32,6 +34,10 @@ public class ProgressiveExplosion {
     }
 
     public static void start(ServerLevel level, double x, double y, double z) {
+        level.playSound(null, x, y, z,
+            SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 4.0F, 1.0F);
+        level.sendParticles(ParticleTypes.EXPLOSION_EMITTER,
+            x, y, z, 1, 0.0, 0.0, 0.0, 0.0);
         Map<Integer, List<BlockPos>> layers = new TreeMap<>(Comparator.reverseOrder());
 
         BlockPos center = BlockPos.containing(x, y, z);
